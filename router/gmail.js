@@ -11,7 +11,7 @@ Router.get('/sent',async(req,res)=>{
 
     let passcode = '';
     if(req.query.ispasscode == "true"){
-         passcode = req.query.ispasscode
+         passcode = req.query.passcode
     }else{
         passcode = 'zzcbqbpejhsmftup';
     }
