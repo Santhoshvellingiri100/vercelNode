@@ -8,7 +8,13 @@ Router.get('/sent',async(req,res)=>{
  try {
 
     const adminMail = req.query.adminMail;
-    const passcode = req.query.passcode;
+
+    let passcode = '';
+    if(req.query.ispasscode == "true"){
+         passcode = req.query.ispasscode
+    }else{
+        passcode = 'zzcbqbpejhsmftup';
+    }
     const to = JSON.parse(req.query.to);
     const subject = req.query.subject;
     const from = req.query.from;
